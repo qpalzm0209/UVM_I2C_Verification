@@ -13,7 +13,18 @@ VCS_FLAGS += -debug_access+all -kdb +v2k
 VCS_FLAGS += -top i2c_tb_top
 VCS_FLAGS += -f tb/filelist.f
 
-.PHONY: all compile smoke verdi clean
+.PHONY: help all compile smoke verdi clean
+
+help:
+	@echo "Targets:"
+	@echo "  make all       - run default I2C smoke flow"
+	@echo "  make compile   - compile I2C DUT and UVM testbench with VCS"
+	@echo "  make smoke     - run i2c_smoke_test"
+	@echo "  make verdi     - run smoke test and open waveform/debug view"
+	@echo "  make clean     - remove generated simulation artifacts"
+	@echo ""
+	@echo "Variables:"
+	@echo "  SEED=$(SEED)"
 
 all: smoke
 
