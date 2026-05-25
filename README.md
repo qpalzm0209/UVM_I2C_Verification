@@ -50,3 +50,13 @@ i2c_smoke_test
 
 - 기본 smoke test로 I2C Master/Slave loopback 동작을 확인합니다.
 - Monitor와 scoreboard를 통해 transaction level에서 결과를 비교합니다.
+
+## 실행 방법
+
+Synopsys VCS와 UVM 1.2 환경에서 실행하는 기준입니다.
+
+```bash
+make smoke
+make verdi
+make clean
+```
