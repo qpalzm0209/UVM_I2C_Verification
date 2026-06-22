@@ -15,12 +15,11 @@ module i2c_top (
     output logic [7:0] led,
     output logic       led_15
 );
-    logic btn_u, btn_d, btn_l, btn_r, btn_c;
+    logic btn_l, btn_r, btn_c;
 
     logic       cmd_start;
     logic       cmd_write;
     logic       cmd_read;
-    logic       cmd_stop;
     logic [7:0] tx_data;
     logic       ack_in;
 
@@ -43,7 +42,6 @@ module i2c_top (
     assign cmd_start = btn_c;
     assign cmd_write = btn_r;
     assign cmd_read  = btn_l;
-    assign cmd_stop  = btn_d;
     assign tx_data   = sw;
     assign ack_in    = 1'b1;
     assign led       = slave_data;
@@ -60,7 +58,6 @@ module i2c_top (
         .cmd_start (cmd_start),
         .cmd_write (cmd_write),
         .cmd_read  (cmd_read),
-        .cmd_stop  (cmd_stop),
         .tx_data   (tx_data),
         .ack_in    (ack_in),
         .mode      (mode),
@@ -92,20 +89,6 @@ module i2c_top (
         .seg     (seg),
         .dp      (dp),
         .an      (an)
-    );
-
-    btn_debouncer u_btn_debouncer (
-        .clk       (clk),
-        .reset     (reset),
-        .btn       (btn[0]),
-        .btn_pulse (btn_u)
-    );
-
-    btn_debouncer d_btn_debouncer (
-        .clk       (clk),
-        .reset     (reset),
-        .btn       (btn[1]),
-        .btn_pulse (btn_d)
     );
 
     btn_debouncer l_btn_debouncer (

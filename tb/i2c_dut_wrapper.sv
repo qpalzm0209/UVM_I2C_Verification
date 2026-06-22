@@ -25,7 +25,6 @@ module i2c_dut_wrapper(i2c_if vif);
         .cmd_start     (vif.cmd_start),
         .cmd_write     (vif.cmd_write),
         .cmd_read      (vif.cmd_read),
-        .cmd_stop      (vif.cmd_stop),
         .tx_data       (vif.tx_data),
         .ack_in        (vif.ack_in),
         .mode          (vif.mode),

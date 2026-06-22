@@ -112,7 +112,6 @@ package i2c_uvm_pkg;
             vif.drv_cb.cmd_start <= 1'b0;
             vif.drv_cb.cmd_write <= 1'b0;
             vif.drv_cb.cmd_read  <= 1'b0;
-            vif.drv_cb.cmd_stop  <= 1'b0;
             vif.drv_cb.tx_data   <= 8'h00;
             vif.drv_cb.ack_in    <= 1'b1;
         endtask
@@ -136,7 +135,6 @@ package i2c_uvm_pkg;
 
             vif.drv_cb.tx_data   <= req.data;
             vif.drv_cb.ack_in    <= 1'b1;
-            vif.drv_cb.cmd_stop  <= 1'b0;
             vif.drv_cb.cmd_start <= 1'b0;
             vif.drv_cb.cmd_write <= ~req.mode;
             vif.drv_cb.cmd_read  <= req.mode;

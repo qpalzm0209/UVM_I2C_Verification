@@ -11,7 +11,6 @@ module i2c_tb_top;
     wire       cmd_start_mon      = tb_if.cmd_start;
     wire       cmd_write_mon      = tb_if.cmd_write;
     wire       cmd_read_mon       = tb_if.cmd_read;
-    wire       cmd_stop_mon       = tb_if.cmd_stop;
     wire [7:0] tx_data_mon        = tb_if.tx_data;
     wire       mode_mon           = tb_if.mode;
     wire [7:0] rx_data_mon        = tb_if.rx_data;
@@ -47,7 +46,6 @@ module i2c_tb_top;
         tb_if.cmd_start = 1'b0;
         tb_if.cmd_write = 1'b0;
         tb_if.cmd_read  = 1'b0;
-        tb_if.cmd_stop  = 1'b0;
         tb_if.tx_data   = 8'h00;
         tb_if.ack_in    = 1'b1;
 

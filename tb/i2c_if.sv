@@ -3,7 +3,6 @@ interface i2c_if(input logic clk);
     logic       cmd_start;
     logic       cmd_write;
     logic       cmd_read;
-    logic       cmd_stop;
     logic [7:0] tx_data;
     logic       ack_in;
 
@@ -24,7 +23,6 @@ interface i2c_if(input logic clk);
         output cmd_start;
         output cmd_write;
         output cmd_read;
-        output cmd_stop;
         output tx_data;
         output ack_in;
 

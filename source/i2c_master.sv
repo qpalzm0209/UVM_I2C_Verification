@@ -4,9 +4,8 @@ module i2c_master (
     input  logic       clk,
     input  logic       reset,
     input  logic       cmd_start,
-    input  logic       cmd_write, // btn_u
-    input  logic       cmd_read,  // btn_d
-    input  logic       cmd_stop,
+    input  logic       cmd_write,
+    input  logic       cmd_read,
     input  logic [7:0] tx_data,
     input  logic       ack_in,
     output logic       mode,
