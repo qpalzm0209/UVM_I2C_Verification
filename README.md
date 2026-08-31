@@ -2,8 +2,8 @@
 
 ## 프로젝트 개요
 > 발표영상(싱글) : https://drive.google.com/file/d/1ePGzcyC4c0sLpwSAkeYLiEPlmSfexH1s/view?usp=drive_link  
-> 발표자료(싱글) : https://drive.google.com/file/d/15UOciy35ZHzkBzh2YRFDWcRITzPA8Ij-/view?usp=drive_link
-> 발표자료(멀티) : https://drive.google.com/file/d/19TSYeDSoE6Xd23otR7XnSdfvnUUCIZsA/view?usp=drive_link
+> 발표자료(싱글) : https://drive.google.com/file/d/15UOciy35ZHzkBzh2YRFDWcRITzPA8Ij-/view?usp=drive_link  
+> 발표자료(멀티) : https://drive.google.com/file/d/19TSYeDSoE6Xd23otR7XnSdfvnUUCIZsA/view?usp=drive_link  
 
 단일 FPGA에서 I2C Master와 Slave를 구현하고, 두 I2C 포트를 연결한 1바이트 write/read 통신을 UVM 기반으로 검증한 프로젝트입니다.
 Write 데이터는 Slave 레지스터와 LED로, Read 데이터는 FND로 확인하며, SDA/SCL의 START, 주소, ACK/NACK, STOP 동작을 transaction 단위로 검증합니다.  
